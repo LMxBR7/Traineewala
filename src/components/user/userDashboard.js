@@ -204,13 +204,13 @@
 // export default UserDashboard;
 
 
-import React, { useState } from 'react';
+import React, { useState, useRef, useEffect} from 'react';
 import './userDashboard.css';
 
 const mockData = {
-    ongoing: [{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' }],
-    past: [{ topic: 'Java Fundamentals', startDate: '2024-09-01', endDate: '2024-09-03', location: 'Room 202' }],
-    available: [{ id: 1, topic: 'Advanced Spring Boot', startDate: '2024-11-01', location: 'Room 303' }]
+    ongoing: [{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' }],
+    past: [{ topic: 'Java Fundamentals', startDate: '2024-09-01', endDate: '2024-09-03', location: 'Room 202' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' }],
+    available: [{ id: 1, topic: 'Advanced Spring Boot', startDate: '2024-11-01', location: 'Room 303' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' },{ topic: 'React Basics', startDate: '2024-10-01', endDate: '2024-10-05', location: 'Room 101' }]
 };
 
 const TraineeManagerDashboard = ({ userType }) => {
@@ -281,13 +281,13 @@ const TraineeManagerDashboard = ({ userType }) => {
                 </ul>
             </section>
 
-            <section className="training-section">
+            <section className="training-apply">
                 <button onClick={loadAvailableTrainings}>Available Trainings</button>
                 <ul>
                     {availableTrainings.map((training) => (
-                        <li key={training.id}>
+                        <li className="list-wala" key={training.id}>
                             <strong>{training.topic}</strong> - {training.location} (Starts on {training.startDate})
-                            <button onClick={() => handleApplyTraining(training.id)}>Apply</button>
+                            <button className='apply-button' onClick={() => handleApplyTraining(training.id)}>Apply</button>
                         </li>
                     ))}
                 </ul>

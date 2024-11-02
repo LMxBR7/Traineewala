@@ -85,7 +85,6 @@ const LandingPage = () => {
             <li><a href="#benefits">Benefits</a></li>
             <li><a href="#help">Help</a></li>
             <li><a href="#contact">Contact</a></li>
-            <li><Link to="/login">Login</Link></li>
           </ul>
         </nav>
       </header>
@@ -93,7 +92,7 @@ const LandingPage = () => {
         <h1>Welcome to Training Management System</h1>
         <p>Manage your training programs effectively and efficiently.</p>
         <Link to="/login">
-          <button className="hero-button">Get Started</button>
+          <button className="hero-button">Login</button>
         </Link>
       </section>
       <section className="info">

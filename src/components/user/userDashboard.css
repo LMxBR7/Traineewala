@@ -237,35 +237,36 @@ body {
 
 /* userDashboard.css */
 
+/* userDashboard.css */
+
+/* General Styles */
 body {
     font-family: 'Arial', sans-serif;
     margin: 0;
     padding: 0;
-    background-color: #f4f7f9;
+    background-color: #ffffff;
 }
 
 .dashboard-container {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
+    max-width: 1200px;
+    margin: 20px auto;
     padding: 20px;
+    border-radius: 8px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
+    background-color: #fff;
 }
 
+/* Header Styles */
 .dashboard-header {
-    width: 100%;
-    background-color: #ff00ae; /* Header background color */
-    color: #ffffff;
-    padding: 15px;
-    border-radius: 10px;
     display: flex;
     justify-content: space-between;
     align-items: center;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
-    margin-bottom: 20px;
+    padding: 10px;
+    border-bottom: 2px solid black;
 }
 
-h2 {
-    margin: 0;
+.dashboard-header h2 {
+    color: black;
     font-size: 24px;
 }
 
@@ -278,127 +279,206 @@ h2 {
     border-radius: 50%;
 }
 
+/* Profile Dropdown Styles */
 .profile-dropdown {
     position: absolute;
+    top: 40px;
     right: 0;
-    background-color: #ffffff;
-    border: 1px solid #ddd;
-    border-radius: 8px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    z-index: 1000;
+    background-color: #fff;
+    border: 1px solid black;
+    border-radius: 4px;
+    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.2);
+    z-index: 10;
 }
 
 .profile-dropdown button {
-    display: block;
     width: 100%;
+    padding: 10px;
     border: none;
     background-color: transparent;
-    padding: 10px;
-    text-align: left;
+    color: #ff00ae;
     cursor: pointer;
+    text-align: left;
 }
 
 .profile-dropdown button:hover {
-    background-color: #f1f1f1;
+    background-color: #e9f5ff;
 }
 
+/* Training Section Styles */
 .training-section {
-    width: 100%;
-    max-width: 800px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    margin-bottom: 20px;
-    padding: 20px;
+    margin: 20px 0;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #f8f9fa;
 }
 
 .training-section button {
-    background-color: #ff00ae;
+    padding: 10px 15px;
+    background-color: black;
     color: white;
     border: none;
-    border-radius: 8px;
-    padding: 10px;
-    font-size: 16px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
+    font-size: 16px;
+    margin-bottom: 10px;
 }
 
 .training-section button:hover {
-    background-color: #d5006d; /* Darker pink on hover */
+    background-color: #ff00ae;
 }
 
 .training-section ul {
-    list-style-type: none;
+    list-style: none;
     padding: 0;
-    margin: 15px 0 0;
 }
 
 .training-section li {
-    padding: 10px;
-    border-bottom: 1px solid #ddd;
+    padding: 10px 0;
+    border-bottom: 1px solid #e9ecef;
 }
 
-.training-section li:last-child {
-    border-bottom: none;
+.training-apply {
+    padding: 20px;
 }
 
-.new-training-form {
+.training-apply ul {
+    list-style: none;
+    padding: 0;
+}
+
+.list-wala {
     display: flex;
-    justify-content: center;
-    margin-top: 10px;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-radius: 10px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    justify-content: space-between;
+    align-items: center;
+    padding: 12px 18px;
+    background-color: #f5f5f5;
+    margin-bottom: 12px;
+    border-radius: 8px;
+    box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1);
+}
+
+.apply-button {
+    padding: 6px 12px; /* Small padding for compact button */
+    font-size: 14px;
+    background-color: black;
+    color: white;
+    border: none;
+    border-radius: 5px;
+    cursor: pointer;
+    transition: background-color 0.3s, transform 0.2s;
+    max-width: 60px; /* Ensures consistent width */
+    text-align: center;
+    white-space: nowrap;
+}
+
+.apply-button:hover {
+    background-color: black;
+    transform: scale(1.05); /* Slight scaling effect */
+}
+
+.apply-button:active {
+    transform: scale(1); /* Returns to original size on click */
+}
+
+/* New Training Form Styles */
+.new-training-form {
+    margin-top: 15px;
+    display: flex; /* Use flexbox for layout */
+    flex-direction: column; /* Arrange items vertically */
+    position: relative; /* Ensure relative positioning for children */
 }
 
 .new-training-form label {
-    display: block;
-    margin-bottom: 5px; 
-    font-weight: bold;
-    color: #333; 
+    margin-bottom: 5px; /* Reduce margin for label */
 }
+
 .new-training-form textarea {
     width: 100%;
     padding: 10px;
-    border-radius: 8px;
-    border: 1px solid #ddd;
-    resize: vertical;
-    margin-bottom: 10px;
-    font-size: 14px; 
+    border: 1px solid #ced4da;
+    border-radius: 4px;
+    resize: vertical; /* Allow vertical resizing only */
+    margin-bottom: 40px; /* Space below the textarea */
+    z-index: 1; /* Ensure textarea is below the button */
+    position: relative; /* Ensure stacking context */
 }
 
 .new-training-form button {
-    background-color: #ff00ae;
+    padding: 10px 15px;
+    background-color: black;
     color: white;
     border: none;
-    border-radius: 8px;
-    padding: 10px;
+    border-radius: 4px;
     cursor: pointer;
-    transition: background-color 0.3s ease;
-    width: 100%;
+    display: block; /* Ensures the button takes full width */
+    margin-top: 50px; /* Space above the button */
+    z-index: 2; /* Ensure button is above the textarea */
 }
 
 .new-training-form button:hover {
-    background-color: #d5006d; /* Darker pink on hover */
+    background-color: #ff00ae;
 }
 
 
+/* Approval Section Styles */
 .approval-section {
-    width: 100%;
-    max-width: 800px;
-    background-color: #ffffff;
-    border-radius: 10px;
-    box-shadow: 0 4px 10px rgba(0, 0, 0, 0.1);
-    padding: 20px;
     margin-top: 20px;
+    padding: 15px;
+    border: 1px solid black;
+    border-radius: 4px;
+    background-color: #e8f4fa;
 }
 
 .request-details {
     margin-top: 15px;
-    padding: 15px;
-    background-color: #f9f9f9;
-    border-radius: 8px;
-    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1);
+    padding: 10px;
+    border: 1px solid #17a2b8;
+    border-radius: 4px;
+    background-color: #f1f8ff;
+}
+
+.request-details button {
+    margin-right: 10px;
+    padding: 8px 12px;
+    border: none;
+    border-radius: 4px;
+    color: white;
+}
+
+.request-details button:first-child {
+    background-color: black;
+}
+
+.request-details button:last-child {
+    background-color: black;
+}
+
+.request-details button:hover {
+    opacity: 0.9;
+}
+
+/* Responsive Styles */
+@media (max-width: 768px) {
+    .dashboard-container {
+        padding: 10px;
+    }
+
+    .dashboard-header {
+        flex-direction: column;
+        align-items: flex-start;
+    }
+
+    .dashboard-header h2 {
+        margin-bottom: 10px;
+    }
+
+    .training-section button {
+        width: 100%;
+    }
+}
+.dashboard-container {
+    pointer-events: auto; /* Ensure interaction is allowed */
 }
 
