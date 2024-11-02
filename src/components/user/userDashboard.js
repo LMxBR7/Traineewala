@@ -246,7 +246,7 @@ const TraineeManagerDashboard = ({ userType }) => {
     return (
         <div className="dashboard-container">
             <header className="dashboard-header">
-                <h2>Trainee Manager Dashboard</h2>
+                <h2>User Dashboard</h2>
                 <div className="user-profile" onClick={toggleProfileMenu}>
                     <img src="https://via.placeholder.com/40" alt="User" className="profile-icon" />
                     {showProfileMenu && (
