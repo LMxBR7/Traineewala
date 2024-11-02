@@ -1,0 +1,388 @@
+  /* /* LandingPage.css
+  .landing-page {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    
+    .header {
+      background-color: #4CAF50;
+      color: white;
+      padding: 10px 0;
+    }
+    
+    .header nav ul {
+      list-style-type: none;
+      padding: 0;
+    }
+    
+    .header nav ul li {
+      display: inline;
+      margin: 0 15px;
+    }
+    
+    .header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .section {
+      margin: 20px 0;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .login-section {
+      margin: 20px 0;
+      padding: 20px;
+      background-color: #4CAF50;
+      color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .login-button {
+      background-color: white;
+      color: #4CAF50;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .login-button:hover {
+      background-color: #45a049;
+      color: white;
+    }
+    */
+
+
+
+
+
+    /* LandingPage.css 
+
+  .landing-page {
+      font-family: Arial, sans-serif;
+      text-align: center;
+      background-color: #f0f0f0;
+      padding: 20px;
+    }
+    
+    .header {
+      display: flex;
+      justify-content: space-between;
+      align-items: center;
+      background-color:  #1c0b86;
+      color: white;
+      padding: 10px 20px;
+    }
+    
+    .header .logo img {
+      height: 50px;
+    }
+    
+    .header nav ul {
+      list-style-type: none;
+      padding: 0;
+      display: flex;
+      gap: 20px;
+    }
+    
+    .header nav ul li {
+      display: inline;
+    }
+    
+    .header nav ul li a {
+      color: white;
+      text-decoration: none;
+      font-weight: bold;
+    }
+    
+    .hero {
+      background: url('software\ developers\ and\ learners\ receiving\ training\ from\ an\ instructor\ in\ an\ advanced\ company\ setting.png') no-repeat center center/cover;
+      color: white;
+      padding: 100px 20px;
+    }
+    
+    .hero-button {
+      background-color:  #1c0b86;
+      color: white;
+      border: none;
+      padding: 10px 20px;
+      font-size: 16px;
+      cursor: pointer;
+      border-radius: 5px;
+      transition: background-color 0.3s ease;
+    }
+    
+    .hero-button:hover {
+      background-color:  #1c0b86;
+    }
+    
+    .section {
+      margin: 20px 0;
+      padding: 20px;
+      background-color: white;
+      border-radius: 10px;
+      box-shadow: 0 4px 8px rgba(0, 0, 0, 0.1);
+    }
+    
+    .footer {
+      background-color: #1c0b86;
+      color: white;
+      padding: 10px 0;
+    }
+*/
+
+/* landingPage.css */
+
+/* landingPage.css */
+
+body {
+  margin: 0;
+  font-family: Arial, sans-serif;
+  background-color: #ffffff;
+}
+
+.landing-page {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  color: #ffffff;
+}
+
+.header {
+  width: 100%;
+  margin-right: 150px;
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  color: white;
+}
+
+.logo img {
+  height: 90px;
+  width: auto;
+  zoom: 1;
+  margin-left: 200px;
+}
+
+nav ul {
+  display: flex;
+  list-style: none;
+  gap: 40px;
+  margin: 0;
+}
+
+nav ul li {
+  font-size: 18px;
+}
+
+nav ul li a {
+  color: rgb(3, 3, 3);
+  text-decoration: none;
+  transition: color 0.3s ease;
+}
+
+nav ul li a:hover {
+  color: #ff00ae;
+  transition: color 0.5s ease;
+}
+
+.hero {
+  text-align: center;
+  justify-content:center;
+  padding-top:15vw;
+  width: 80vw;
+  height: 35vw;
+  background-image: url('\software developers and learners receiving training from an instructor in an advanced company setting.png');
+  background-size: cover;
+  background-position: center;
+  overflow: hidden;
+  border-radius: 20px;
+  position: relative;
+}
+
+.hero::before {
+  content: "";
+  position: absolute;
+  top: 0;
+  left: 0;
+  right: 0;
+  bottom: 0;
+  background: rgba(0, 0, 0, 0.8); /* Dark overlay for readability */
+}
+
+
+.hero h1,
+.hero p,
+.hero-button {
+  position: relative;
+  z-index: 1;
+}
+
+.hero h1 {
+  font-size: 50px;
+  margin-bottom: 10px;
+  color: #ffffff;
+}
+
+.hero p {
+  font-size: 20px;
+  margin-bottom: 20px;
+  color: #eee;
+}
+
+.hero-button {
+  background-color: #ff00ae;
+  color: white;
+  width: 150px;
+  padding: 10px 20px;
+  font-size: 18px;
+  border: none;
+  border-radius: 4px;
+  cursor: pointer;
+  transition: background-color 0.3s ease;
+}
+
+.hero-button:hover {
+  background-color: #00d9ff;
+}
+
+.info {
+  padding: 60px 20px;
+  text-align: center;
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.info h1 {
+  font-size: 32px;
+  color: #333;
+  margin-bottom: 20px;
+  font-weight: 700;
+}
+
+.info p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin-bottom: 0;
+}
+
+.about-section {
+  padding: 60px 20px;
+  text-align: center; /* Center text */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.about-section h2 {
+  font-size: 28px;
+  color: #ff00ae;
+  margin-bottom: 20px;
+}
+
+.about-section p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin: 10px 0; /* Space between paragraphs */
+}
+
+.brand-name {
+  color: #007bff; /* Highlight the brand name */
+  font-weight: bold;
+}
+
+
+.benefits-section {
+  padding: 60px 20px;
+  text-align: center; /* Center text */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.benefits-section h2 {
+  font-size: 28px;
+  color: #ff00ae;
+  margin-bottom: 20px;
+}
+
+.benefits-section p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin: 10px 0; /* Space between paragraphs */
+}
+
+.help-section, .contact-section {
+  padding: 60px 20px;
+  text-align: center; /* Center text */
+  max-width: 900px;
+  margin: 0 auto;
+}
+
+.help-section h2, .contact-section h2 {
+  font-size: 28px;
+  color: #ff00ae;
+  margin-bottom: 20px;
+}
+
+.help-section p, .contact-section p {
+  font-size: 18px;
+  color: #555;
+  line-height: 1.6;
+  margin: 10px 0; /* Space between paragraphs */
+}
+
+.help-section ul, .contact-section ul {
+  list-style-type: none; /* Remove default list styling */
+  padding: 0; /* Remove default padding */
+}
+
+.help-section li, .contact-section li {
+  font-size: 18px; /* Same size for list items */
+  color: #555; /* Same color for consistency */
+}
+
+
+.section {
+  padding: 60px 20px;
+  max-width: 800px;
+  width: 100%;
+  text-align: center;
+}
+
+.section h2 {
+  font-size: 28px;
+  margin-bottom: 10px;
+  color: #4caf50;
+}
+
+.section p {
+  font-size: 16px;
+  color: #555;
+  line-height: 1.6;
+}
+
+.footer {
+  padding: 20px;
+  background-color: #333;
+  color: #eee;
+  text-align: center;
+  font-size: 14px;
+  margin-top: 40px;
+}
+
+.footer p {
+  margin: 0;
+}
+
