@@ -159,6 +159,7 @@ body {
 }
 
 .header {
+  height:80px;
   width: 100%;
   margin-right: 100px;
   display: flex;
@@ -169,6 +170,7 @@ body {
 
 .logo img {
   padding-top: 30px;
+  padding-bottom: 30px;
   height: 150px;
   width: auto;
   zoom: 1;
@@ -254,7 +256,7 @@ nav ul li a:hover {
 }
 
 .hero-button:hover {
-  background-color: #00d9ff;
+  background-color: #2d1b76;
 }
 
 .info {
@@ -279,24 +281,86 @@ nav ul li a:hover {
 }
 
 .about-section {
-  padding: 60px 20px;
-  text-align: center; /* Center text */
-  max-width: 900px;
-  margin: 0 auto;
+  text-align: center;
+  padding: 2rem;
+  background: linear-gradient(135deg, #2d1b76, #dd5c8b); /* Gradient background */
+  border-radius: 15px; /* Adjust the radius as desired */
+  box-shadow: 0 4px 8px rgba(0, 0, 0, 0.9); /* Adjust shadow for a soft effect */
 }
 
 .about-section h2 {
-  font-size: 28px;
-  color: #ff00ae;
-  margin-bottom: 20px;
+  font-size: 2.5rem;
+  color: white
 }
 
 .about-section p {
-  font-size: 18px;
-  color: #555;
-  line-height: 1.6;
-  margin: 10px 0; /* Space between paragraphs */
+  margin: 1rem auto;
+  max-width: 800px;
+  color: white;
 }
+
+.about-cards {
+  display: grid;
+  grid-template-columns: repeat(auto-fit, minmax(250px, 1fr));
+  gap: 1.5rem;
+  margin-top: 2rem;
+}
+
+.about-card {
+  background: #ffffff;
+  border-radius: 8px;
+  box-shadow: 0 4px 6px rgba(0, 0, 0, 0.1);
+  padding: 1.5rem;
+  text-align: left;
+  transition: transform 0.3s ease, box-shadow 0.3s ease; /* Add a transition for smooth effect */
+}
+
+.about-card:hover {
+  transform: translateY(-5px); /* Move the card up on hover */
+  box-shadow: 0 8px 12px rgba(0, 0, 0, 0.2); /* Increase shadow on hover */
+}
+
+.about-card h3 {
+  font-size: 1.25rem;
+  color: #333333;
+  margin-top: 1rem;
+}
+
+.about-card p {
+  color: #6f6f6f;
+}
+
+.icon {
+  width: 50px;
+  height: 50px;
+  border-radius: 50%;
+  display: inline-block;
+}
+
+.icon.new-hire {
+  background-color: #5a67d8;
+}
+
+.icon.deep-skilling {
+  background-color: #38b2ac;
+}
+
+.icon.certification {
+  background-color: #ed64a6;
+}
+
+.icon.product-training {
+  background-color: #ecc94b;
+}
+
+.icon.leadership {
+  background-color: #f56565;
+}
+
+.icon.soft-skills {
+  background-color: #48bb78;
+}
+
 
 .brand-name {
   color: #007bff; /* Highlight the brand name */
@@ -304,42 +368,203 @@ nav ul li a:hover {
 }
 
 
+
+/* Benefits Section */
 .benefits-section {
-  padding: 60px 20px;
-  text-align: center; /* Center text */
-  max-width: 900px;
-  margin: 0 auto;
+  text-align: center;
+  max-width: 100%;
+  margin: 30px;
+  padding: 40px 20px;
+  background: linear-gradient(135deg, #2d1b76, #dd5c8b);
+  border-radius: 15px;
+  color: white;
+  transition: transform 0.3s ease, box-shadow 0.3s ease, background 0.3s ease;
+}
+
+.benefit-item:hover {
+  transform: translateY(-5px);
+  box-shadow: 0 8px 15px rgba(0, 0, 0, 0.2);
+  background: rgba(255, 255, 255, 0.2);
 }
 
 .benefits-section h2 {
-  font-size: 28px;
-  color: #ff00ae;
-  margin-bottom: 20px;
+  font-size: 32px;
+  font-weight: bold;
+  margin-bottom: 10px;
+  color:white
 }
 
-.benefits-section p {
+.benefits {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: space-around;
+  gap: 20px;
+}
+
+.benefit-item {
+  flex: 1 1 calc(45% - 20px);
+  background: rgba(255, 255, 255, 0.1);
+  padding: 20px;
+  border-radius: 8px;
+  text-align: left;
+}
+
+.benefit-item h3 {
   font-size: 18px;
-  color: #555;
-  line-height: 1.6;
-  margin: 10px 0; /* Space between paragraphs */
+  font-weight: bold;
+  margin-bottom: 10px;
 }
 
-.help-section, .contact-section {
-  padding: 60px 20px;
-  text-align: center; /* Center text */
-  max-width: 900px;
-  margin: 0 auto;
+.benefit-item p {
+  font-size: 14px;
+  line-height: 1.5;
 }
+
+
+/* Responsive Design */
+@media (max-width: 768px) {
+  .benefit-item {
+    flex: 1 1 100%;
+  }
+}
+
+#ongoing-trainings h2{
+  color:black;
+  max-width: 100%;
+}
+
+#upcoming-trainings h2{
+  color:black;
+}
+
+#past-trainings h2{
+  color:black;
+}
+
+.cards-container {
+  display: flex;
+  flex-wrap: wrap; /* Allow cards to wrap to the next line */
+  justify-content: space-between; /* Space out the cards */
+  margin: 20px 0; /* Space around the container */
+  max-width: 100%;
+  background-color: white;
+  border-radius: 4px;
+}
+
+.training-card {
+  background: linear-gradient(135deg, #2d1b76, #dd5c8b); /* Gradient background */
+  border-radius: 12px; /* Rounded corners */
+  padding: 20px; /* Padding inside the card */
+  width: calc(33% - 20px); /* Make three cards fit in one row with some space */
+  margin: 10px; /* Margin between cards */
+  box-shadow: 0 4px 15px rgba(0, 0, 0, 0.2); /* Deep shadow for a floating effect */
+  transition: transform 0.3s, box-shadow 0.3s; /* Smooth scale and shadow transition on hover */
+  color: white; /* Text color */
+  position: relative; /* For pseudo-element positioning */
+  overflow: hidden; /* Hide overflow for rounded corners */
+  text-align: center; /* Center align text */
+}
+
+.training-card:hover {
+  transform: translateY(-5px); /* Slight lift effect on hover */
+  box-shadow: 0 6px 20px rgba(0, 0, 0, 0.4); /* Enhanced shadow on hover */
+}
+
+.training-card h3 {
+  font-size: 1.6em; /* Larger title */
+  margin-bottom: 10px; /* Space below title */
+  text-transform: uppercase; /* Uppercase for emphasis */
+  letter-spacing: 1px; /* Spacing between letters */
+}
+
+.training-card p {
+  margin: 5px 0; /* Uniform margin for paragraphs */
+  font-size: 1em; /* Font size for content */
+  background-color: white;
+  border-radius: 4px;
+}
+
+.icon {
+  font-size: 50px; /* Icon size */
+  margin-bottom: 10px; /* Space below icon */
+  opacity: 0.8; /* Slight transparency */
+  transition: transform 0.3s; /* Smooth icon hover transition */
+}
+
+.training-card:hover .icon {
+  transform: scale(1.1); /* Slightly enlarge icon on hover */
+}
+
+.see-more {
+  display: block;
+  text-align: center; /* Center the see more link */
+  margin-top: 20px; /* Space above the link */
+  text-decoration: none; /* Remove underline */
+  color: blue; /* Link color */
+  font-weight: bold; /* Bold text */
+  font-size: 1.2em; /* Slightly larger font */
+}
+
+.see-more:hover {
+  text-decoration: underline; /* Underline effect on hover */
+}
+#contact h2{
+  color:white;
+}
+.contact-section {
+  padding: 40px;
+  background: linear-gradient(135deg, #2d1b76, #dd5c8b); /* Gradient background */
+  border-radius: 40px;
+  color:white;
+}
+
+.contact-wrapper {
+  display: flex; /* Use flexbox to align items side by side */
+  justify-content: space-between; /* Space between the two columns */
+  align-items: flex-start; /* Align items to the top */
+  max-width: 1200px; /* Max width for larger screens */
+  margin: 0 auto; /* Center the section */
+  border-radius: 4px;
+}
+
+.contact-info {
+  flex: 1; /* Allow this column to take up available space */
+  margin-right: 20px; /* Add some spacing to the right */
+  color:white;
+}
+
+.contact-details {
+  flex: 1; /* Allow this column to take up available space */
+  background-color: #ffffff; /* White background for contrast */
+  border-radius: 8px; /* Rounded corners */
+  padding: 20px; /* Inner padding */
+  box-shadow: 0 2px 8px rgba(0, 0, 0, 0.1); /* Subtle shadow for depth */
+}
+
+.contact-details ul {
+  list-style: none; /* Remove bullet points from the list */
+  padding: 0; /* Remove default padding */
+}
+
+.contact-details li {
+  margin: 10px 0; /* Spacing between list items */
+}
+
+.contact-details strong {
+  color: #333; /* Darker color for labels */
+}
+
+
 
 .help-section h2, .contact-section h2 {
   font-size: 28px;
-  color: #ff00ae;
+
   margin-bottom: 20px;
 }
 
 .help-section p, .contact-section p {
   font-size: 18px;
-  color: #555;
+  color: white;
   line-height: 1.6;
   margin: 10px 0; /* Space between paragraphs */
 }
