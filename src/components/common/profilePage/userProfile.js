@@ -59,8 +59,8 @@ const UserProfile = () => {
     return (
         <div className="profile-container">
             <img src={logo} alt="Logo" className="logo" />
-            <h2>User Profile</h2>
             <div className="profile-details">
+            <h2>User Profile</h2>
                 <div className="profile-field">
                     <span>Name:</span>
                     <p>{profile.name}</p>
